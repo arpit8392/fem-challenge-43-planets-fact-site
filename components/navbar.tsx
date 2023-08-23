@@ -1,11 +1,10 @@
 import MobileMenu from '@/components/mobile-menu'
-import { Separator } from '@/components/ui/separator'
 import planetsData from '@/planets-data.json'
 import Link from 'next/link'
 
 const Navbar = () => {
 	return (
-		<header>
+		<header className='border-b border-white/10'>
 			<nav className='flex justify-between items-center md:flex-col md:gap-10 lg:flex-row px-6 py-4 md:px-14 md:py-8 lg:px-8 lg:py-6'>
 				<h1 className='font-antonio uppercase text-[28px] tracking-[-1.05px]'>
 					The Planets
@@ -23,7 +22,6 @@ const Navbar = () => {
 				</ul>
 				<MobileMenu />
 			</nav>
-			<Separator className='bg-white/20' />
 		</header>
 	)
 }

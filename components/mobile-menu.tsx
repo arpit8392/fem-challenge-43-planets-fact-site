@@ -9,19 +9,15 @@ import Link from 'next/link'
 const MobileMenu = () => {
 	return (
 		<Sheet>
-			<SheetTrigger asChild>
-				<button className='block md:hidden'>
-					<Image
-						src={HamburgerIcon}
-						alt='Open Mobile Menu'
-						className='opacity-25'
-					/>
+			<SheetTrigger asChild className='data-[state=open]:opacity-25'>
+				<button className='block md:hidden outline-none'>
+					<Image src={HamburgerIcon} alt='Open Mobile Menu' />
 				</button>
 			</SheetTrigger>
-			<SheetContent className='bg-midnight px-6 pt-11' side='right-full'>
-				<ul className='flex flex-col gap-5 divide-y divide-white/10'>
+			<SheetContent className='bg-midnight px-6 py-10' side='right-full'>
+				<ul>
 					{planetData.map((planet) => (
-						<li key={planet.name} className='pt-5'>
+						<li key={planet.name} className='py-5 border-b border-white/10'>
 							<Link href={`/planets/${planet.name}`}>
 								<div className='flex items-center justify-between'>
 									<div className='flex items-center gap-6'>
