@@ -6,6 +6,8 @@ import HamburgerIcon from '@/public/assets/icon-hamburger.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 
+// TODO: Remove the outline from Sheet/Drawer Component
+
 const MobileMenu = () => {
 	return (
 		<Sheet>
